@@ -4,20 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.jorgesoasti.ciclovidaactivity.MainActivity">
+    tools:context="com.jorgesoasti.ciclovidaactivity.SegundaActividad">
 
     <TextView
-        android:id="@+id/tvUno"
+        android:id="@+id/tvDos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:text="Pantalla 1"/>
+        android:text="Pantalla 2"/>
 
     <Button
-        android:id="@+id/btnUno"
+        android:id="@+id/btnDos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvUno"
-        android:text="UNO"/>
+        android:layout_below="@+id/tvDos"
+        android:text="DOS"/>
 
 </RelativeLayout>
