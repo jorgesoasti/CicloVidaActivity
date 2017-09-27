@@ -12,6 +12,8 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final int REQUEST_CODE = 10;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,10 +29,21 @@ public class MainActivity extends AppCompatActivity {
                 String texto1 = tvUno.getText().toString();
                 Intent intent = new Intent(MainActivity.this, SegundaActividad.class);
                 intent.putExtra("One", texto1);
-                startActivity(intent);
+                startActivityForResult(intent, REQUEST_CODE);
             }
         });
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_CODE && resultCode == RESULT_OK){
+            if(data.hasExtra("Two")){
+                String texto1 = data.getStringExtra("Two");
+                TextView tv1 = (TextView) findViewById(R.id.tvUno);
+                tv1.setText(texto1);
+            }
+        }
     }
 
     @Override

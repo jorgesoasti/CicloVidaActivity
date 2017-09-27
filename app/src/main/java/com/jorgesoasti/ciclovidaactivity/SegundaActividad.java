@@ -30,10 +30,10 @@ public class SegundaActividad extends AppCompatActivity {
                 String texto2 = tvDos.getText().toString();
                 Intent intent = new Intent(SegundaActividad.this, MainActivity.class);
                 intent.putExtra("Two", texto2);
-                startActivity(intent);
+                setResult(RESULT_OK, intent);
+                onBackPressed();
             }
         });
-
     }
 
     @Override
